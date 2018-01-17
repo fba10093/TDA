@@ -1,0 +1,16 @@
+# run_analysis.R README 
+
+This is the course project for the Getting and Cleaning Data Coursera course. The R script, run_analysis.R, does the following:
+
+1. Download the dataset if it does not already exist in the working directory
+2. Unzip the dataset and read the training and test data for x, y and subject.
+3. Column bind the subject to the x and y data for the training and test set respectively.
+4. Then row bind the training with the test data set.
+5. Load the features data set, and from there extract the index position for mean() and std() fields.
+6. Using the index positions along with the subject and activity fields, extract the relevant columns of data (i.e. mean() and std() fields).
+7. Update table with column names.
+8. Load the activity_labels data set.
+9. Replace the numeric factors for activity to corresponding activity labels.
+10. Renaming some of the headers to be more descriptive.
+11. Using dplyr, create a tidy dataset that consists of the average (mean) value of each variable for each subject and activity pair.
+12. Final filtered data is printed onto TidyData.txt
